@@ -1,0 +1,1 @@
+C:\Users\Gabriel\source\repos\examen_calificaciones\examen_calificaciones.csproj;x64

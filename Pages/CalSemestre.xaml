@@ -1,0 +1,49 @@
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen_calificaciones.Pages.CalSemestre"
+             Title="CalSemestre">
+    <Grid RowDefinitions=".1*, .2*, .3*, .2*">
+
+        <VerticalStackLayout Grid.Row="0">
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="{Binding Titulo}" FontSize="20"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout VerticalOptions="Start" Grid.Row="1">
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label Text="Semestre "></Label>
+                </VerticalStackLayout>
+                <Entry Placeholder="Semestre" FontSize="20" x:Name="entrySemestre" WidthRequest="200"></Entry>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        
+
+        <VerticalStackLayout Grid.Row="2" VerticalOptions="Start" IsVisible="true" x:Name="verticalIngresarValores" Spacing="30">
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Label Text="{Binding Item1}" WidthRequest="100"></Label>
+                <Entry x:Name="entryValor1" Placeholder="Valor %" WidthRequest="100"></Entry>
+                <Entry x:Name="entryCalif1" Placeholder="Calificacion" WidthRequest="100"></Entry>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Label Text="{Binding Item2}" WidthRequest="100"></Label>
+                <Entry x:Name="entryValor2" Placeholder="Valor %" WidthRequest="100"></Entry>
+                <Entry x:Name="entryCalif2" Placeholder="Calificacion" WidthRequest="100"></Entry>
+            </HorizontalStackLayout>
+
+            
+        </VerticalStackLayout>
+
+        <VerticalStackLayout VerticalOptions="Start" Grid.Row="3">
+            <Button Text="Aceptar" Clicked="btnAceptar1_Clicked" WidthRequest="850" x:Name="btnAceptar1"></Button>
+
+
+            <Label Text="{Binding Calificacion}"  ></Label>
+        </VerticalStackLayout>
+
+
+    </Grid>
+</ContentPage>

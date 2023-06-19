@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="examen_calificaciones.Pages.materia"
+             Title="materia">
+    <Grid RowDefinitions=".1*, .2*, .3*, .2*">
+
+
+        <VerticalStackLayout Grid.Row="0">
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="{Binding Titulo}" FontSize="20"/>
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+
+        <VerticalStackLayout VerticalOptions="Start" Grid.Row="1">
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <VerticalStackLayout VerticalOptions="Center">
+                    <Label Text="Materia "></Label>
+                </VerticalStackLayout>
+                <Entry Placeholder="materia" FontSize="20" x:Name="entrtMateria" WidthRequest="200"></Entry>
+                
+
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout Grid.Row="2" VerticalOptions="Start" IsVisible="true" x:Name="verticalIngresarRubros" >
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Rubro 1"></Label>
+                <Entry x:Name="entryRubro1" Placeholder="..."  WidthRequest="200"></Entry>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Rubro 2"></Label>
+                <Entry x:Name="entryRubro2" Placeholder="..."  WidthRequest="200"></Entry>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center">
+                <Label Text="Rubro 3"></Label>
+                <Entry x:Name="entryRubro3" Placeholder="..." WidthRequest="200"></Entry>
+
+            </HorizontalStackLayout>
+        </VerticalStackLayout>
+ 
+        <VerticalStackLayout Grid.Row="2" VerticalOptions="Start" IsVisible="false" x:Name="verticalIngresarCalif" Spacing="30">
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Label Text="{Binding Rubro1}" WidthRequest="100"></Label>
+                <Entry x:Name="entryPorcentaje" Placeholder="%" WidthRequest="50"></Entry>
+                <Entry x:Name="entryCalif1" Placeholder="Calificacion" WidthRequest="100"></Entry>
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Label Text="{Binding Rubro2}" WidthRequest="100"></Label>
+                <Entry x:Name="entryExamen" Placeholder="%"  WidthRequest="50"></Entry>
+                <Entry x:Name="entryCalif2" Placeholder="Calificacion" WidthRequest="100"></Entry>
+
+            </HorizontalStackLayout>
+
+            <HorizontalStackLayout HorizontalOptions="Center" Spacing="10">
+                <Label Text="{Binding Rubro3}" WidthRequest="100"></Label>
+                <Entry x:Name="entryTareas" Placeholder="%"  WidthRequest="50"></Entry>
+                <Entry x:Name="entryCalif3" Placeholder="Calificacion" WidthRequest="100"></Entry>
+
+            </HorizontalStackLayout>
+
+            <Button Text="Aceptar" x:Name="btnCalcular" WidthRequest="800" IsVisible="false" Clicked="btnCalcular_Clicked"></Button>
+
+            <Label x:Name="calificacionFinalLabel"></Label>
+
+
+        </VerticalStackLayout>
+
+        <VerticalStackLayout VerticalOptions="Start" Grid.Row="3">
+            <Button Text="Aceptar" Clicked="btnAnadir_Clicked" WidthRequest="800" x:Name="btnAceptar1"></Button>
+        </VerticalStackLayout>
+
+
+        <VerticalStackLayout VerticalOptions="Start" Grid.Row="3" IsVisible="false">
+            <Button Text="Aceptar" Clicked="btnAceptar2_Clicked" WidthRequest="800" x:Name="btnAceptar2" BackgroundColor="blue"></Button>
+        </VerticalStackLayout>
+
+        <VerticalStackLayout VerticalOptions="Start" Grid.Row="3" IsVisible="false">
+            <Button Text="Aceptar" Clicked="btnAceptar3_Clicked" WidthRequest="800" x:Name="btnAceptar3"></Button>
+        </VerticalStackLayout>
+
+
+
+    </Grid>
+</ContentPage>
